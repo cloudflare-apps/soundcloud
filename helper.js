@@ -9,8 +9,8 @@
     req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
     req.onload = function(){
-      if (request.status < 400){
-        var data = JSON.parse(request.responseText);
+      if (req.status < 400){
+        var data = JSON.parse(req.responseText);
         cb(data);
       }
     }
