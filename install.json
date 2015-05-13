@@ -1,0 +1,38 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "script",
+        "src": "./helper.js"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "embeds": {
+        "title": "Tracks or Playlists",
+        "type": "array",
+        "items": {
+          "title": "Embed",
+          "type": "object",
+          "properites": {
+            "url": {
+              "title": "URL",
+              "type": "string",
+              "description": "The URL of the SoundCloud media to be embedded",
+              "order": 1,
+              "default": "https://soundcloud.com/hand144/see-you-again-paul-walker-tribute-fast-and-furious-8"
+            },
+            "location": {
+              "title": "Location",
+              "type": "object",
+              "format": "element",
+              "description": "Select where on the page would you like this embed to appear",
+              "order": 2
+            }
+          }
+        }
+      }
+    }
+  }
+}
