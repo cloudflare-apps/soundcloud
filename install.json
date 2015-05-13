@@ -15,7 +15,7 @@
         "items": {
           "title": "Embed",
           "type": "object",
-          "properites": {
+          "properties": {
             "url": {
               "title": "URL",
               "type": "string",
