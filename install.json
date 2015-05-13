@@ -19,7 +19,7 @@
             "url": {
               "title": "URL",
               "type": "string",
-              "description": "The URL of the SoundCloud media to be embedded",
+              "description": "The URL of the SoundCloud track or playlist to be embedded",
               "order": 1,
               "default": "https://soundcloud.com/hand144/see-you-again-paul-walker-tribute-fast-and-furious-8"
             },
