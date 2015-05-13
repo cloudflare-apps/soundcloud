@@ -21,17 +21,21 @@
   var options = INSTALL_OPTIONS;
 
   for (var i=0; i < options.embeds.length; i++) {
-    getEmbed(options.embeds[i].url, function(info){
+    (function(i){
+      if (!options.embeds[i].url || !options.embeds[i].location || !options.embeds[i].location.selector) return;
 
-      var add = function(){
-        var el = Eager.createElement(options.embeds[i].location);
-        el.innerHTML = info.html;
-      }
+      getEmbed(options.embeds[i].url, function(info){
 
-      if (document.readyState == 'loading')
-        document.addEventListener('DOMContentLoaded', add);
-      else
-        add();
-    });
+        var add = function(){
+          var el = Eager.createElement(options.embeds[i].location);
+          el.innerHTML = info.html;
+        }
+
+        if (document.readyState == 'loading')
+          document.addEventListener('DOMContentLoaded', add);
+        else
+          add();
+      });
+    })(i);
   }
 })()
