@@ -5,7 +5,7 @@
     var body = "format=json&url=" + encodeURIComponent(url);
 
     var req = new XMLHttpRequest();
-    req.open('POST', "http://soundcloud.com/oembed", true);
+    req.open('POST', "https://soundcloud.com/oembed", true);
     req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
     req.onload = function(){
