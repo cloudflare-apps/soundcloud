@@ -29,6 +29,37 @@
               "format": "element",
               "description": "Select where on the page would you like this embed to appear",
               "order": 2
+            },
+            "showAdvanced": {
+              "type": "boolean",
+              "title": "Show advanced options",
+              "order": 3,
+              "default": false
+            },
+            "advanced": {
+              "showIf": {
+                "showAdvanced": true
+              },
+              "type": "object",
+              "title": "Advanced Options",
+              "order": 4,
+              "properties": {
+                "showComments": {
+                  "title": "Show Comments",
+                  "type": "boolean",
+                  "description": "Should comments be shown on the track(s)?",
+                  "default": true,
+                  "order": 1
+                },
+                "color": {
+                  "title": "Color",
+                  "type": "string",
+                  "format": "color",
+                  "description": "The color of the play button and other colored elements of the player",
+                  "default": "#FF5500",
+                  "order": 2
+                }
+              }
             }
           }
         }

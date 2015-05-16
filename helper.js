@@ -1,8 +1,13 @@
 (function(){
   if (!document.addEventListener || !window.JSON) return;
 
-  var getEmbed = function(url, cb){
-    var body = "format=json&url=" + encodeURIComponent(url);
+  var getEmbed = function(options, cb){
+    var body = "format=json&url=" + encodeURIComponent(options.url);
+
+    if (!options.advanced.showComments)
+      body += "&show_comments=false"
+    if (options.advanced.color)
+      body += "&color=" + options.advanced.color
 
     var req = new XMLHttpRequest();
     req.open('POST', "https://soundcloud.com/oembed", true);
@@ -24,7 +29,7 @@
     (function(i){
       if (!options.embeds[i].url || !options.embeds[i].location || !options.embeds[i].location.selector) return;
 
-      getEmbed(options.embeds[i].url, function(info){
+      getEmbed(options.embeds[i], function(info){
 
         var add = function(){
           var el = Eager.createElement(options.embeds[i].location);
