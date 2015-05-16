@@ -4,10 +4,10 @@
   var getEmbed = function(options, cb){
     var body = "format=json&url=" + encodeURIComponent(options.url);
 
-    if (!options.advanced.showComments)
+    if (!options.showComments)
       body += "&show_comments=false"
-    if (options.advanced.color)
-      body += "&color=" + options.advanced.color
+    if (options.color)
+      body += "&color=" + options.color
 
     var req = new XMLHttpRequest();
     req.open('POST', "https://soundcloud.com/oembed", true);
