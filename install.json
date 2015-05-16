@@ -36,14 +36,6 @@
               "description": "Should comments be shown on the track(s)?",
               "default": true,
               "order": 3
-            },
-            "color": {
-              "title": "Color",
-              "type": "string",
-              "format": "color",
-              "description": "The color of the play button and other colored elements of the player",
-              "default": "#FF5500",
-              "order": 4
             }
           }
         }

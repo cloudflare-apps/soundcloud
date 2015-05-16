@@ -6,8 +6,6 @@
 
     if (!options.showComments)
       body += "&show_comments=false"
-    if (options.color)
-      body += "&color=" + options.color.substring(1)
 
     var req = new XMLHttpRequest();
     req.open('POST', "https://soundcloud.com/oembed", true);
