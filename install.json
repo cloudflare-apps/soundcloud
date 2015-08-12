@@ -21,7 +21,7 @@
               "type": "string",
               "description": "The URL of the SoundCloud track or playlist to be embedded",
               "order": 1,
-              "default": "https://soundcloud.com/hand144/see-you-again-paul-walker-tribute-fast-and-furious-8"
+              "default": "https://soundcloud.com/chookiemusic/viceroy-dream-of-bombay-feat"
             },
             "location": {
               "title": "Location",
