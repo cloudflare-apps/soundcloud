@@ -3,7 +3,7 @@
     "head": [
       {
         "type": "script",
-        "src": "./helper.js"
+        "src": "./source/app.js"
       }
     ]
   },
@@ -27,6 +27,10 @@
               "title": "Location",
               "type": "object",
               "format": "element",
+              "default": {
+                "selector": "body",
+                "method": "prepend"
+              },
               "description": "Select where on the page would you like this embed to appear",
               "order": 2
             },
